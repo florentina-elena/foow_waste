@@ -37,5 +37,27 @@ print(nrow(alle_clearances))
 print(names(alle_clearances))
 
 
+#Efter oprettelsen af data.base i mysql skal vi nu udfylde de 2 tabeller som vi har oprettet der:
+stores <- alle_clearances %>%
+  select(store_id, store_name, zip) %>%
+  distinct()
+
+dbWriteTable(con, "store", stores, append = TRUE, row.names = FALSE)
+
+discount <- alle_clearances %>%
+  transmute(
+    store_id = store_id,
+    ean = product.ean,
+    product_name = product.description,
+    new_price = offer.newPrice,
+    original_price = offer.originalPrice,
+    discount_percent = offer.percentDiscount,
+    quantity = offer.stock,
+    run_timestamp = Sys.time()
+  )
+
+dbWriteTable(con, "discount_products", discount, append = TRUE, row.names = FALSE)
+
+
 
 
