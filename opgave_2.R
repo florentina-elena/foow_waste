@@ -40,6 +40,17 @@ print(names(alle_clearances))
 
 
 #Efter oprettelsen af data.base i mysql skal vi nu udfylde de 2 tabeller som vi har oprettet der:
+
+#Den føsrte trin er at oprette en connection til Mysql 
+
+con <- dbConnect(
+  MariaDB(),
+  user = "dallocal",
+  password = "Danielabuse22!",
+  host = "localhost",
+  dbname = "foodwaste"
+)
+
 stores <- alle_clearances %>%
   select(store_id, store_name, zip) %>%
   distinct()
