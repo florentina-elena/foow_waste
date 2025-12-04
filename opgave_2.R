@@ -33,7 +33,7 @@ for (zip in postnumre) {
   alle_clearances <- bind_rows(alle_clearances, clear)
 }
 
-View(alle_clearances)
+
 
 
 
