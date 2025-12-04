@@ -71,6 +71,13 @@ discount <- alle_clearances %>%
 
 dbWriteTable(con, "discount_products", discount, append = TRUE, row.names = FALSE)
 
+#Her laver man en logfil 
+
+write(paste(Sys.time(), "- hentet", nrow(alle_clearances), "tilbud"), 
+      file = "foodwaste_log.txt", 
+      append = TRUE)
+
+
 #Man skal huske at disconnecte fra databasen og det gøre man ved:
 
 dbDisconnect(con)
