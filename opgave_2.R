@@ -1,6 +1,8 @@
 library(httr)
 library(jsonlite)
 library(dplyr)
+library(DBI)
+library(RMariaDB)
 
 
 #####Hente for flere post nummer og får "clearences" fra tabellen altså får en data frame med produkterne
