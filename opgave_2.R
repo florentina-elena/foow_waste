@@ -71,6 +71,11 @@ discount <- alle_clearances %>%
 
 dbWriteTable(con, "discount_products", discount, append = TRUE, row.names = FALSE)
 
+#Man skal huske at disconnecte fra databasen og det gøre man ved:
+
+dbDisconnect(con)
+
+
 
 
 
