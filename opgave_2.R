@@ -33,6 +33,8 @@ for (zip in postnumre) {
   alle_clearances <- bind_rows(alle_clearances, clear)
 }
 
+print(nrow(alle_clearances))
+print(names(alle_clearances))
 
 
 
