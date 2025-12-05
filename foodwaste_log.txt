@@ -1,0 +1,6 @@
+2025-12-05 09:41:02.688025 - cron kørsel - hentet 858 tilbud
+2025-12-05 10:30:03.730613 - cron kørsel - hentet 886 tilbud
+2025-12-05 10:32:03.983115 - cron kørsel - hentet 886 tilbud
+2025-12-05 10:34:03.994594 - cron kørsel - hentet 886 tilbud
+2025-12-05 10:36:03.204753 - cron kørsel - hentet 900 tilbud
+2025-12-05 10:38:03.424405 - cron kørsel - hentet 895 tilbud
